@@ -284,7 +284,7 @@
   			<h2>Add Category</h2>
   <label>x</label>
 </div>
-  <form method="POST" action="" style="background: ivory;">
+  <form method="POST" action="add_category" style="background: ivory;">
     <label for="fname">Name:</label>
     <input type="text"  name="name" placeholder="Your name..">
 
