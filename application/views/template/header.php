@@ -90,26 +90,154 @@
 		<div id="sidebar-nav" class="sidebar">
 			<div class="sidebar-scroll">
 				<nav>
-					<ul class="nav">
-						<li><a href="index.html" class="active"><i class="lnr lnr-home"></i> <span>Dashboard</span></a></li>
-						<li><a href="elements.html" class=""><i class="lnr lnr-code"></i> <span>Notification</span></a></li>
-						<li><a href="charts.html" class=""><i class="lnr lnr-chart-bars"></i> <span>Category</span></a></li>
-						<li><a href="panels.html" class=""><i class="lnr lnr-cog"></i> <span>Panels</span></a></li>
-						<li><a href="notifications.html" class=""><i class="lnr lnr-alarm"></i> <span>Notifications</span></a></li>
-						<li>
-							<a href="#subPages" data-toggle="collapse" class="collapsed"><i class="lnr lnr-file-empty"></i> <span>Pages</span> <i class="icon-submenu lnr lnr-chevron-left"></i></a>
-							<div id="subPages" class="collapse ">
-								<ul class="nav">
-									<li><a href="page-profile.html" class="">Profile</a></li>
-									<li><a href="page-login.html" class="">Login</a></li>
-									<li><a href="page-lockscreen.html" class="">Lockscreen</a></li>
-								</ul>
-							</div>
-						</li>
-						<li><a href="tables.html" class=""><i class="lnr lnr-dice"></i> <span>Tables</span></a></li>
-						<li><a href="typography.html" class=""><i class="lnr lnr-text-format"></i> <span>Typography</span></a></li>
-						<li><a href="icons.html" class=""><i class="lnr lnr-linearicons"></i> <span>Icons</span></a></li>
-					</ul>
+						<div class="sidenav">
+			<button class="drop"><i id="lnr" class="lnr lnr-home"></i>Dashboard
+  
+  </button>
+
+  <button class="drop"><i id="lnr" class="lnr lnr-alarm"></i>Notification 
+    <i class="fa fa-caret-down"></i>
+  </button>
+  <div class="dropdown">
+     <a href="add_notification.php"><i id="lnr" class="lnr lnr-plus-circle"></i>Add</a>
+    <a href="view_notifcation.php"><i id="lnr" class="lnr lnr-eye"></i>View</a>
+  </div>
+  <button class="drop"><i id="lnr" class="lnr lnr-user"></i>Register
+    <i class="fa fa-caret-down"></i>
+  </button>
+  <div class="dropdown">
+     <a href="add_user.php"><i id="lnr" class="lnr lnr-plus-circle"></i>Add</a>
+    <a href="view_user.php"><i id="lnr" class="lnr lnr-eye"></i>View</a>
+  
+  </div>
+ 
+  <button class="drop"><i id="lnr" class="lnr lnr-trash"></i>Archive
+    <i class="fa fa-caret-down"></i>
+  </button>
+  <div class="dropdown">
+    <!-- <a href="add_module.php">Add</a> -->
+    <a href="archive_user.php"><i id="lnr" class="lnr lnr-eye"></i>View</a>
+  </div>
+
+  <button class="drop"><i id="lnr" class="lnr lnr-tag"></i><span>Category</span>
+    <i class="fa fa-caret-down"></i>
+  </button>
+  <div class="dropdown">
+    <a href="add_library_sites.php"><i id="lnr" class="lnr lnr-plus-circle"></i>Add</a>
+    <a href="view_library_sites.php"><i id="lnr" class="lnr lnr-eye"></i>View</a>
+  </div>
+</div>
+
+
+<script>
+/* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
+var drop = document.getElementsByClassName("drop");
+var i;
+
+for (i = 0; i < drop.length; i++) {
+  drop[i].addEventListener("click", function() {
+  this.classList.toggle("active");
+  var dropContent = this.nextElementSibling;
+  if (dropContent.style.display === "block") {
+  dropContent.style.display = "none";
+  } else {
+  dropContent.style.display = "block";
+  }
+  });
+}
+</script>
+
+<style>
+.sidenav{
+  height: auto;
+  width: auto;
+  z-index: 1;
+  top: 0;
+  left: 0;
+
+  overflow-x: hidden;
+  padding-top: 12px;
+
+}
+.sidenav a{
+  display: block;
+  color: black;
+  padding: 12px;
+  text-decoration: none;
+}
+
+@media(min-width:768px) {
+    .sidenav {
+        z-index: 1;
+        /*position: absolute;*/
+        width: 250px;
+       
+    }
+
+.sidenav a, .drop {
+  padding: 16px;
+  text-decoration: none;
+  font-size: 18px;
+  /*color: #818181;*/
+  border: none;
+  background: none;
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+  
+}
+
+
+.sidenav a:hover, .drop:hover {
+  color: white;
+}
+
+.active {
+
+  color: white;
+}
+
+
+.dropdown {
+  display: none;
+  padding-left: 6px;
+}
+
+/* Optional: Style the caret down icon */
+.fa-caret-down {
+  float: right;
+  padding-right: 15px;
+}
+.lnr{
+	padding: 12px;
+}
+.lnr:hover{
+	color: lightblue;
+}
+
+</style>  
+
+
 				</nav>
 			</div>
 		</div>
+
+
+		<script>
+/* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
+var drop = document.getElementsByClassName("collapsed");
+var i;
+
+for (i = 0; i < drop.length; i++) {
+  drop[i].addEventListener("click", function() {
+  this.classList.toggle("active");
+  var dropContent = this.nextElementSibling;
+
+  if (dropContent.style.display === "block") {
+  dropContent.style.display = "none";
+  } else {
+  dropContent.style.display = "block";
+  }
+  });
+}
+</script>
