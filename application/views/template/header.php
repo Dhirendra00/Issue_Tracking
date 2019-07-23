@@ -106,7 +106,7 @@
     <i class="fa fa-caret-down"></i>
   </button>
   <div class="dropdown">
-     <a href="add_user.php"><i id="lnr" class="lnr lnr-plus-circle"></i>Add</a>
+     <a href="user.php"><i id="lnr" class="lnr lnr-plus-circle"></i>Add</a>
     <a href="view_user.php"><i id="lnr" class="lnr lnr-eye"></i>View</a>
   
   </div>

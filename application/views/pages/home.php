@@ -240,13 +240,14 @@
 	</div>
 		<div class="add_issue1">
 
-       <div class="container">
+       <div class="container"style="background: #008080; ">
 
-  	<div class="cl">
+  	<div class="cl" style=" color: white;">
   			<h2>Add Issue</h2>
-  <label>x</label>
+  <label style="color: red;">x</label>
 </div>
-  <form method="POST" action="add_issue">
+  <form method="POST" action="add_issue" >
+ <div id="form"style="background: ivory; border-radius: 5px;">
     <label for="fname">Ticket No.</label>
     <input type="number"  name="ticket" placeholder="Your name..">
 
@@ -267,7 +268,8 @@
 
     <label for="subject">Description</label>
    <input type="text" name="description">
-
+</div>
+<br><hr>
     <input type="submit" value="Add Issue">
   </form>
 
@@ -278,17 +280,18 @@
 <!-- adding category -->
 			<div class="add_category">
 
-       <div class="container">
+       <div class="container"style="background: #008080; ">
 
-  	<div class="cl1" style="width: 20%:">
+  	<div class="cl1" style=" color: white; ">
   			<h2>Add Category</h2>
-  <label>x</label>
+  <label style="color: red;">x</label>
 </div>
-  <form method="POST" action="add_category" style="background: ivory;">
-    <label for="fname">Name:</label>
+  <form method="POST" action="add_category" >
+   <div id="form" style="background: ivory; border-radius: 5px;"> 
+    <label for="fname">Name</label>
     <input type="text"  name="name" placeholder="Your name..">
 
-    
+    </div><br><hr>
     <input type="submit" value="Add Category">
   </form>
 
@@ -476,6 +479,9 @@ margin-bottom: 10px;
 input[type=submit]:hover {
   background-color: #45a049;
 }
+form{
+	border-radius: 15px solid;
+}
 .add_issue1{
 	width: 100%;
 	height: 100%;
@@ -501,7 +507,7 @@ height: fit-content;
   border-radius: 5px;
   background-color: #f2f2f2;
 margin-top: 100px;
-  padding-top: 20px;
+  padding-top: 5px;
   width: 50%;
 }
 .cl {
@@ -512,7 +518,7 @@ margin-top: 100px;
 	/*margin-left: 620px;*/
 	top: 2;
 	/*right: 10px;*/
-	font-size: 42px;
+	font-size: 25px;
 	color: #333;
 	/*transform: rotate(45deg);*/
 	cursor: pointer;
@@ -523,14 +529,10 @@ margin-top: 100px;
 .cl1 {
 	display: flex;
 	justify-content: space-between;
-	/*position: absolute;*/
-	/*margin-top: -20px;*/
-	/*margin-left: 620px;*/
-	top: 2;
+		top: 2;
 	/*right: 10px;*/
-	font-size: 42px;
+	font-size: 25px;
 	color: #333;
-	/*transform: rotate(45deg);*/
 	cursor: pointer;
 	&:hover {
 		color: #666;
