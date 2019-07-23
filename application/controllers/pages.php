@@ -12,6 +12,7 @@ class Pages extends CI_Controller
 		}
 		$data['title']=ucfirst($page);
 		$data['issue']=$this->model->get_issue();
+		$data['category']=$this->model->get_category();
 		// print_r($data['issue']);
 		$this->load->view('template/header');
 	$this->load->view('pages/'.$page, $data);
@@ -32,10 +33,6 @@ class Pages extends CI_Controller
 		);
 		// return $this->db->insert('issue',$data);
 		$this->model->add_issue($data);
-				// $data['title']=ucfirst($page);
-	// 	$this->load->view('template/header');
-	// $this->load->view('pages/home');
-	// 	$this->load->view('template/footer');
 		$path=site_url();
 			header("Location:$path");
 
@@ -59,6 +56,21 @@ class Pages extends CI_Controller
 		$this->load->view('template/footer');
 			
 
+	}
+	public function add_category(){
+		// $slug = url_title($this->input->post('title'));
+		$data = array(
+			'name'=>$this->input->post('name')	
+		);
+		// return $this->db->insert('issue',$data);
+		$this->model->add_category($data);
+				// $data['title']=ucfirst($page);
+		// $this->load->view('template/header');
+	// $this->load->view('pages/home');
+		// $this->load->view('template/footer');
+			
+$path=site_url();
+			header("Location:$path");
 	}
 }
 ?>

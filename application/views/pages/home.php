@@ -118,7 +118,7 @@
 								<div class="panel-footer">
 									<div class="row">
 										<div class="col-md-6"><span class="panel-note"><i class="fa fa-clock-o"></i> Last 24 hours</span></div>
-										<div class="col-md-6 text-right"><a href="#" class="btn btn-primary">View All Purchases</a></div>
+										<div class="col-md-6 text-right"><a href="#" class="btn btn-primary">View All Issue</a></div>
 									</div>
 								</div>
 							</div>
@@ -134,8 +134,8 @@
 								<div class="panel-heading">
 									<h3 class="panel-title">category</h3>
 									<div class="right">
+										<a class="btn btn-success update-pro" href="#" title="Upgrade to Pro" id="category_button"><i class="fa fa-plus"></i> <span>Add Category</span></a>
 										<button type="button" class="btn-toggle-collapse"><i class="lnr lnr-chevron-up"></i></button>
-										<button type="button" class="btn-remove"><i class="lnr lnr-cross"></i></button>
 									</div>
 								</div>
 								<div class="panel-body">
@@ -181,7 +181,7 @@
 								<div class="panel-footer">
 									<div class="row">
 									
-										<div class="col-md-6 text-right" style="margin-left: 95px;"><a href="#" class="btn btn-primary">View All Purchases</a></div>
+										<div class="col-md-6 text-right" style="margin-left: 95px;"><a href="#" class="btn btn-primary">View All Category</a></div>
 									</div>
 								</div>
 							</div>
@@ -274,6 +274,31 @@
 </div>
 						
 		</div>
+
+<!-- adding category -->
+			<div class="add_category">
+
+       <div class="container">
+
+  	<div class="cl1" style="width: 20%:">
+  			<h2>Add Category</h2>
+  <label>x</label>
+</div>
+  <form method="POST" action="" style="background: ivory;">
+    <label for="fname">Name:</label>
+    <input type="text"  name="name" placeholder="Your name..">
+
+    
+    <input type="submit" value="Add Category">
+  </form>
+
+</div>
+						
+		</div>
+
+
+
+
 	<!-- END WRAPPER -->
 	<!-- Javascript -->
 	<script src="assets/vendor/jquery/jquery.min.js"></script>
@@ -461,6 +486,16 @@ input[type=submit]:hover {
 	  align-items: top;
 	  display: none;
 }
+.add_category{
+	width: 100%;
+	height: 100%;
+	background:rgba(0,0,0,0.7);
+	  position: absolute;
+	  top: 0;
+	  justify-content: center;
+	  align-items: top;
+	  display: none;
+}
 .container {
 height: fit-content;
   border-radius: 5px;
@@ -485,6 +520,23 @@ margin-top: 100px;
 		color: #666;
 	}
 }
+.cl1 {
+	display: flex;
+	justify-content: space-between;
+	/*position: absolute;*/
+	/*margin-top: -20px;*/
+	/*margin-left: 620px;*/
+	top: 2;
+	/*right: 10px;*/
+	font-size: 42px;
+	color: #333;
+	/*transform: rotate(45deg);*/
+	cursor: pointer;
+	&:hover {
+		color: #666;
+	}
+}
+
 
 </style>
 <script>
@@ -494,4 +546,11 @@ margin-top: 100px;
 	document.querySelector('.cl').addEventListener("click", function() {
 	document.querySelector('.add_issue1').style.display = "none";
 });
+
+  document.getElementById('category_button').addEventListener("click", function() {
+	document.querySelector('.add_category').style.display = "flex";
+});
+	document.querySelector('.cl1').addEventListener("click", function() {
+	document.querySelector('.add_category').style.display = "none";
+});	
 </script>
