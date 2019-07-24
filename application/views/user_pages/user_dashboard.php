@@ -1,5 +1,5 @@
 
-	<link rel="stylesheet" href="assets/css/user_main.css">
+
 	<div class="main">
 			<!-- MAIN CONTENT -->
 			<div class="main-content">
@@ -435,6 +435,109 @@
 /*body {font-family: Arial, Helvetica, sans-serif;}
 * {box-sizing: border-box;}*/
 
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 20px;
+  resize: vertical;
+}
+input[type=date]{
+  width: 100%;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 10px;
+  resize: vertical;
+}
+input[type=number]{
+  width: 100%;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 10px;
+  resize: vertical;
+}
+
+input[type=submit] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 5px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+margin-bottom: 10px;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+form{
+	border-radius: 15px solid;
+}
+.add_issue1{
+	width: 100%;
+	height: 100%;
+	background:rgba(0,0,0,0.7);
+	  position: absolute;
+	  top: 0;
+	  justify-content: center;
+	  align-items: top;
+	  display: none;
+}
+.add_category{
+	width: 100%;
+	height: 100%;
+	background:rgba(0,0,0,0.7);
+	  position: absolute;
+	  top: 0;
+	  justify-content: center;
+	  align-items: top;
+	  display: none;
+}
+.container {
+height: fit-content;
+  border-radius: 5px;
+  background-color: #f2f2f2;
+margin-top: 100px;
+  padding-top: 5px;
+  width: 50%;
+}
+.cl {
+	display: flex;
+	justify-content: space-between;
+	/*position: absolute;*/
+	/*margin-top: -20px;*/
+	/*margin-left: 620px;*/
+	top: 2;
+	/*right: 10px;*/
+	font-size: 25px;
+	color: #333;
+	/*transform: rotate(45deg);*/
+	cursor: pointer;
+	&:hover {
+		color: #666;
+	}
+}
+.cl1 {
+	display: flex;
+	justify-content: space-between;
+		top: 2;
+	/*right: 10px;*/
+	font-size: 25px;
+	color: #333;
+	cursor: pointer;
+	&:hover {
+		color: #666;
+	}
+}
 
 
 </style>

@@ -14,7 +14,7 @@
 	<!-- MAIN CSS -->
 	<link rel="stylesheet" href="assets/css/main.css">
 	<!-- FOR DEMO PURPOSES ONLY. You should remove this in your project -->
-	<link rel="stylesheet" href="assets/css/user_main.css">
+	<link rel="stylesheet" href="assets/css/demo.css">
 	<!-- GOOGLE FONTS -->
 	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700" rel="stylesheet">
 	<!-- ICONS -->
@@ -91,34 +91,43 @@
 			<div class="sidebar-scroll">
 				<nav>
 						<div class="sidenav">
-			<button class="drop1"><i id="lnr" class="lnr lnr-home"></i>Dashboard
+			<button class="drop"><i id="lnr" class="lnr lnr-home"></i>Dashboard
   
   </button>
 
-  <button class="drop1"><i id="lnr" class="lnr lnr-alarm"></i>Notification 
-   
+  <button class="drop"><i id="lnr" class="lnr lnr-alarm"></i>Notification 
+    <i class="fa fa-caret-down"></i>
   </button>
-
+  <div class="dropdown">
+     <a href="add_notification.php"><i id="lnr" class="lnr lnr-plus-circle"></i>Add</a>
+    <a href="view_notifcation.php"><i id="lnr" class="lnr lnr-eye"></i>View</a>
+  </div>
   <button class="drop"><i id="lnr" class="lnr lnr-user"></i>Register
     <i class="fa fa-caret-down"></i>
   </button>
   <div class="dropdown">
-     <a href="<?php echo base_url();?>user"><i id="lnr" class="lnr lnr-plus-circle"></i>Add</a>
+     <a href="user.php"><i id="lnr" class="lnr lnr-plus-circle"></i>Add</a>
     <a href="view_user.php"><i id="lnr" class="lnr lnr-eye"></i>View</a>
   
   </div>
  
-  <button class="drop1"><i id="lnr" class="lnr lnr-trash"></i>Archive
-   
+  <button class="drop"><i id="lnr" class="lnr lnr-trash"></i>Archive
+    <i class="fa fa-caret-down"></i>
   </button>
-  
+  <div class="dropdown">
+    <!-- <a href="add_module.php">Add</a> -->
+    <a href="archive_user.php"><i id="lnr" class="lnr lnr-eye"></i>View</a>
+  </div>
 
-  <button class="drop1"><i id="lnr" class="lnr lnr-tag"></i><span>Category</span>
-
+  <button class="drop"><i id="lnr" class="lnr lnr-tag"></i><span>Category</span>
+    <i class="fa fa-caret-down"></i>
   </button>
- 
+  <div class="dropdown">
+    <a href="add_library_sites.php"><i id="lnr" class="lnr lnr-plus-circle"></i>Add</a>
+    <a href="view_library_sites.php"><i id="lnr" class="lnr lnr-eye"></i>View</a>
+  </div>
 </div>
-</nav>
+
 
 <script>
 /* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
@@ -139,6 +148,72 @@ for (i = 0; i < drop.length; i++) {
 </script>
 
 <style>
+.sidenav{
+  height: auto;
+  width: auto;
+  z-index: 1;
+  top: 0;
+  left: 0;
+
+  overflow-x: hidden;
+  padding-top: 12px;
+
+}
+.sidenav a{
+  display: block;
+  color: black;
+  padding: 12px;
+  text-decoration: none;
+}
+
+@media(min-width:768px) {
+    .sidenav {
+        z-index: 1;
+        /*position: absolute;*/
+        width: 250px;
+       
+    }
+
+.sidenav a, .drop {
+  padding: 16px;
+  text-decoration: none;
+  font-size: 18px;
+  /*color: #818181;*/
+  border: none;
+  background: none;
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+  
+}
+
+
+.sidenav a:hover, .drop:hover {
+  color: white;
+}
+
+.active {
+
+  color: white;
+}
+
+
+.dropdown {
+  display: none;
+  padding-left: 6px;
+}
+
+/* Optional: Style the caret down icon */
+.fa-caret-down {
+  float: right;
+  padding-right: 15px;
+}
+.lnr{
+	padding: 12px;
+}
+.lnr:hover{
+	color: lightblue;
+}
 
 </style>  
 
@@ -148,3 +223,21 @@ for (i = 0; i < drop.length; i++) {
 		</div>
 
 
+		<script>
+/* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
+var drop = document.getElementsByClassName("collapsed");
+var i;
+
+for (i = 0; i < drop.length; i++) {
+  drop[i].addEventListener("click", function() {
+  this.classList.toggle("active");
+  var dropContent = this.nextElementSibling;
+
+  if (dropContent.style.display === "block") {
+  dropContent.style.display = "none";
+  } else {
+  dropContent.style.display = "block";
+  }
+  });
+}
+</script>
