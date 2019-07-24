@@ -38,6 +38,16 @@ class model extends CI_Model{
 	public function add_category($data){
 		return $this->db->insert('category',$data);
 	}
-	
+		public function get_user($id = false){
+		if ($id== FALSE) {
+			$query = $this->db->get('tbl_user');
+			return $query->result_array();
+		}
+		$query = $this->db->get_where('tbl_user',$id = array('id' => $id));
+		return $query->row_array();
+	}
+	public function add_user($data){
+		return $this->db->insert('tbl_user',$data);
+	}
 }
 ?>

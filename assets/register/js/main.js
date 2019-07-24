@@ -14,7 +14,7 @@ $(function(){
             return true; 
         },
         labels: {
-            finish: "Finish",
+            // finish: "Finish",
             next: "Continue",
             previous: "Back"
         }

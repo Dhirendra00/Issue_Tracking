@@ -11,7 +11,7 @@
 		<link rel="stylesheet" href="assets/register/css/style.css">
 		<div class="main">
 			<div class="wrapper">
-            <form action="">
+            <form method="POST" action="add_user">
             	<div id="wizard">
             		<!-- SECTION 1 -->
 	                <h4></h4>
@@ -58,12 +58,29 @@
                 				
 	                    <div class="form-row">
 	                    	<div class="form-holder">
-								<input type="text" placeholder="Mobile Number" class="form-control" name="contact">
+								<input type="number" placeholder="Mobile Number" class="form-control" name="contact">
 							</div>
 							<div class="form-holder">
-								<input type="text" placeholder="Street Number" class="form-control">
+								<input type="date"  class="form-control" name="date">
 							</div>
+							
 	                    </div>
+	                            <div class="form-row">
+	                    	<div class="form-holder">
+								<input type="text" placeholder="Nationality" class="form-control" name="nationality">
+							</div>
+							<div class="form-holder">
+								<input type="text"  placeholder="Address" class="form-control" name="address">
+							</div>
+							
+	                    </div>
+
+
+	                
+							
+							
+	       
+	                   
                 			</div>
                 			
                 		</div>
@@ -75,19 +92,26 @@
 						
 	                    <div class="form-row">
 	                    	<div class="form-holder">
-								<input type="text" placeholder="Street Name" class="form-control">
+								<input type="text" placeholder="Street Name" class="form-control" name="street_name">
 							</div>
 							<div class="form-holder">
-								<input type="text" placeholder="Street Number" class="form-control">
+								<input type="number" placeholder="Street Number" class="form-control" name="street_number">
 							</div>
 	                    </div>
 	                    <div class="form-row">
 	                    	<div class="form-holder">
-								<input type="text" placeholder="City" class="form-control">
+								<input type="text" placeholder="City" class="form-control" name="city">
 							</div>
 							<div class="form-holder">
-								<input type="text" placeholder="Country" class="form-control">
+								<input type="text" placeholder="Country" class="form-control" name="country">
 							</div>
+
+	                    </div><div class="form-row">
+	                    	
+								<input type="submit" value="Add User">
+						
+						
+							
 	                    </div>
 	                </section>
             	</div>

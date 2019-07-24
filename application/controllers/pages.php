@@ -13,6 +13,7 @@ class Pages extends CI_Controller
 		$data['title']=ucfirst($page);
 		$data['issue']=$this->model->get_issue();
 		$data['category']=$this->model->get_category();
+		$data['tbl_user']=$this->model->get_user();
 		// print_r($data['issue']);
 		$this->load->view('template/header');
 	$this->load->view('pages/'.$page, $data);
@@ -72,5 +73,33 @@ class Pages extends CI_Controller
 $path=site_url();
 			header("Location:$path");
 	}
+
+public function add_user(){
+		// $slug = url_title($this->input->post('title'));
+		$data = array(
+			'fname'=>$this->input->post('fname'),
+			'mname'=>$this->input->post('mname'),
+			'lname'=>$this->input->post('lname'),	
+			'email'=>$this->input->post('email'),
+			'password'=>$this->input->post('password'),
+			'contact'=>$this->input->post('contact'),
+			'date'=>$this->input->post('date'),
+			'nationality'=>$this->input->post('nationality'),
+			'address'=>$this->input->post('address'),
+			'street_name'=>$this->input->post('street_name'),
+			'street_number'=>$this->input->post('street_number'),
+			'country'=>$this->input->post('country')
+		);
+		// return $this->db->insert('issue',$data);
+		$this->model->add_user($data);
+				// $data['title']=ucfirst($page);
+		// $this->load->view('template/header');
+	// $this->load->view('pages/home');
+		// $this->load->view('template/footer');
+			
+$path=site_url();
+			header("Location:$path");
+	}
 }
+
 ?>
