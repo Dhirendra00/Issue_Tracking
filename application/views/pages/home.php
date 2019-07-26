@@ -7,8 +7,8 @@
 					<!-- OVERVIEW -->
 					<div class="panel panel-headline">
 						<div class="panel-heading">
-							<h3 class="panel-title">Weekly Overview</h3>
-							<p class="panel-subtitle">Period: Oct 14, 2016 - Oct 21, 2016</p>
+							<h3 class="panel-title">System Overview</h3>
+							<p class="panel-subtitle"><?php echo date("Y/M/d")?></p>
 						</div>
 						<div class="panel-body">
 							<div class="row">
@@ -76,10 +76,10 @@
 							<!-- RECENT PURCHASES -->
 							<div class="panel" style="width: 1000px;">
 								<div class="panel-heading">
-									<h3 class="panel-title">Issues</h3>
+									<h3 class="panel-title">User</h3>
 									<div class="right">
 
-					<a class="btn btn-success update-pro" href="#" title="Upgrade to Pro" id="button"><i class="fa fa-plus"></i> <span>Add Issue</span></a>
+					<a class="btn btn-success update-pro" href="#" title="Upgrade to Pro" id="button"><i class="fa fa-plus"></i> <span>Add User</span></a>
 			
 									<!-- 	<a href="">+ADD</a> -->
 										<button type="button" class="btn-toggle-collapse"><i class="lnr lnr-chevron-up"></i></button>
@@ -118,7 +118,7 @@
 								<div class="panel-footer">
 									<div class="row">
 										<div class="col-md-6"><span class="panel-note"><i class="fa fa-clock-o"></i> Last 24 hours</span></div>
-										<div class="col-md-6 text-right"><a href="#" class="btn btn-primary">View All Issue</a></div>
+										<div class="col-md-6 text-right"><a href="#" class="btn btn-primary">View All User</a></div>
 									</div>
 								</div>
 							</div>
@@ -132,9 +132,9 @@
 							<!-- TASKS -->
 							<div class="panel" style="width: 300px; height: 385px;">
 								<div class="panel-heading">
-									<h3 class="panel-title">category</h3>
+									<h3 class="panel-title">Issue</h3>
 									<div class="right">
-										<a class="btn btn-success update-pro" href="#" title="Upgrade to Pro" id="category_button"><i class="fa fa-plus"></i> <span>Add Category</span></a>
+										<a class="btn btn-success update-pro" href="#" title="Upgrade to Pro" id="category_button"><i class="fa fa-plus"></i> <span>Add Issue Title:</span></a>
 										<button type="button" class="btn-toggle-collapse"><i class="lnr lnr-chevron-up"></i></button>
 									</div>
 								</div>
@@ -181,7 +181,7 @@
 								<div class="panel-footer">
 									<div class="row">
 									
-										<div class="col-md-6 text-right" style="margin-left: 95px;"><a href="#" class="btn btn-primary">View All Category</a></div>
+										<div class="col-md-6 text-right" style="margin-left: 95px;"><a href="#" class="btn btn-primary">View All Issues</a></div>
 									</div>
 								</div>
 							</div>
@@ -243,7 +243,7 @@
        <div class="container"style="background: #008080; ">
 
   	<div class="cl" style=" color: white;">
-  			<h2>Add Issue</h2>
+  			<h2>Add User</h2>
   <label style="color: red;">x</label>
 </div>
   <form method="POST" action="add_issue" >

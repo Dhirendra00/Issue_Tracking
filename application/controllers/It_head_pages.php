@@ -5,7 +5,7 @@
 class Pages extends CI_Controller
 {
 	
-	public function dashboard($page='user_dashboard')
+	public function dashboard($page='It_head_dashboard')
 	{
 		if (!file_exists(APPPATH.'views/user_pages/'.$page.'.php')) {
 			show_404();

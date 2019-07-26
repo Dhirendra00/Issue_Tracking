@@ -108,7 +108,7 @@
     <i class="fa fa-caret-down"></i>
   </button>
   <div class="dropdown">
-     <a href="<?php echo base_url();?>user"><i id="lnr" class="lnr lnr-plus-circle"></i>Add</a>
+     <a href="<?php echo base_url();?>user_register"><i id="lnr" class="lnr lnr-plus-circle"></i>Add</a>
     <a href="view_user.php"><i id="lnr" class="lnr lnr-eye"></i>View</a>
   
   </div>
@@ -118,7 +118,7 @@
   </button>
   
 
-  <button class="drop1"><i id="lnr" class="lnr lnr-tag"></i><span>Category</span>
+  <button class="drop1"><i id="lnr" class="lnr lnr-tag"></i><span>Issues</span>
 
   </button>
  
