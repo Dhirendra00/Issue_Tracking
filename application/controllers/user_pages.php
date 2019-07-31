@@ -15,7 +15,7 @@ class Pages extends CI_Controller
 		$data['category']=$this->model->get_category();
 		// print_r($data['issue']);
 		$this->load->view('template/user_header');
-	$this->load->view('pages/'.$page, $data);
+	$this->load->view('pages/user_dashboard', $data);
 		$this->load->view('template/user_footer');
 			
 	}

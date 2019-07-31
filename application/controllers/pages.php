@@ -20,5 +20,17 @@ class Pages extends CI_Controller
 		// $this->load->view('template/footer');
 			
 	}
+	public function addUser($page='user_register')
+	{
+		if (!file_exists(APPPATH.'views/pages/'.$page.'.php')) {
+			show_404();
+		}
+		$data['title']=ucfirst('user_register');
+		
+		$this->load->view('template/header');
+	$this->load->view('pages/user_register', $data);
+		$this->load->view('template/footer');
+			
+	}
 	}
 ?>

@@ -101,7 +101,7 @@ margin-top: 100px;
 		color: #666;
 	}
 }
-.sidenav{
+.sidenav1{
   height: auto;
   width: auto;
   z-index: 1;
@@ -112,7 +112,8 @@ margin-top: 100px;
   padding-top: 12px;
 
 }
-.sidenav a{
+.sidenav1 a{
+  
   display: block;
   color: black;
   padding: 12px;
@@ -120,7 +121,7 @@ margin-top: 100px;
 }
 
 @media(min-width:768px) {
-    .sidenav {
+    .sidenav1 {
         z-index: 1;
         /*position: absolute;*/
         width: 250px;
@@ -130,7 +131,7 @@ margin-top: 100px;
 
 }
 
-.sidenav a, .drop {
+.sidenav1 a, .drop {
   padding: 16px;
   text-decoration: none;
   font-size: 18px;
@@ -142,7 +143,7 @@ margin-top: 100px;
   cursor: pointer;
   
 }
-.sidenav a, .drop1 {
+.sidenav1 a, .drop1 {
   padding: 16px;
   text-decoration: none;
   font-size: 18px;
@@ -154,11 +155,11 @@ margin-top: 100px;
   cursor: pointer;
   
 }
-.sidenav a:hover, .drop1:hover {
+.sidenav1 a:hover, .drop1:hover {
   color: white;
 }
 
-.sidenav a:hover, .drop:hover {
+.sidenav1 a:hover, .drop:hover {
   color: white;
 }
 

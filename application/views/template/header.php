@@ -32,12 +32,12 @@
 			</div>
 			<div class="container-fluid">
 				<div class="navbar-btn">
-					<button type="button" class="btn-toggle-fullwidth"><i class="lnr lnr-arrow-left-circle"></i></button>
+					<button id="button" type="button" class="btn-toggle-fullwidth"><i class="lnr lnr-arrow-left-circle"></i></button>
 				</div>
 				<form class="navbar-form navbar-left">
 					<div class="input-group">
-						<input type="text" value="" class="form-control" placeholder="Search dashboard...">
-						<span class="input-group-btn"><button type="button" class="btn btn-primary" style="margin-top: 6px;">Go</button></span>
+						<input type="text" id="search" value="" class="form-control" placeholder="Search dashboard...">
+						<span class="input-group-btn"><button id="button" type="button" class="btn btn-primary" style="margin-top: 6px;">Go</button></span>
 					</div>
 				</form>
 				<!-- <div class="navbar-btn navbar-btn-right">
@@ -91,11 +91,11 @@
 			<div class="sidebar-scroll">
 				<nav>
 						<div class="sidenav">
-			<button class="drop1"><i id="lnr" class="lnr lnr-home"></i>Dashboard
+			<button id="button" class="drop1"><i id="lnr" class="lnr lnr-home"></i>Dashboard
   
   </button>
 
-  <button class="drop"><i id="lnr" class="lnr lnr-alarm"></i>Notification 
+  <button id="button" class="drop"><i id="lnr" class="lnr lnr-alarm"></i>Notification 
    <i class="fa fa-caret-down"></i>
   </button>
   <div class="dropdown">
@@ -104,7 +104,7 @@
   
   </div>
 
-  <button class="drop"><i id="lnr" class="lnr lnr-user"></i>Register
+  <button id="button" class="drop"><i id="lnr" class="lnr lnr-user"></i>Register
     <i class="fa fa-caret-down"></i>
   </button>
   <div class="dropdown">
@@ -113,12 +113,12 @@
   
   </div>
  
-  <button class="drop1"><i id="lnr" class="lnr lnr-trash"></i>Archive
+  <button id="button" class="drop1"><i id="lnr" class="lnr lnr-trash"></i>Archive
    
   </button>
   
 
-  <button class="drop1"><i id="lnr" class="lnr lnr-tag"></i><span>Issues</span>
+  <button id="button" class="drop1"><i id="lnr" class="lnr lnr-tag"></i><span>Issues</span>
 
   </button>
  

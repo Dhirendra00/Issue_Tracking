@@ -248,10 +248,12 @@
 </div>
   <form method="POST" action="add_issue" >
  <div id="form"style="background: ivory; border-radius: 5px;">
-    <label for="fname">Ticket No.</label>
+ 	<label for="fname">First Name</label>
+    <input type="number"  name="ticket" placeholder="Your name..">
+    <label for="fname">First Name</label>
     <input type="number"  name="ticket" placeholder="Your name..">
 
-    <label for="lname">Title</label>
+    <label for="lname">Last Name</label>
     <input type="text" id="lname" name="title" placeholder="Your last name..">
 <label>Category</label>
 <input type="text" name="category">

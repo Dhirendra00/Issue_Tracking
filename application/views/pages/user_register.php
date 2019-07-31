@@ -1,6 +1,6 @@
 
 		<meta charset="utf-8">
-		<title>FormWizard_v6</title>
+	
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta name="author" content="colorlib.com">
 
@@ -8,7 +8,7 @@
 		<link rel="stylesheet" href="assets/register/fonts/material-design-iconic-font/css/material-design-iconic-font.css">
 
 		<!-- STYLE CSS -->
-		<link rel="stylesheet" href="assets/register/css/style.css">
+		<link rel="stylesheet" href="<?= base_url('assets/register/css/style.css')?>">
 		<div class="main">
 			<div class="wrapper">
             <form method="POST" action="add_user">
@@ -108,7 +108,7 @@
 
 	                    </div><div class="form-row">
 	                    	
-								<input type="submit" value="Add User">
+								<input type="submit" value="Add User" name="submit">
 						
 						
 							

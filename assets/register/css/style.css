@@ -28,7 +28,10 @@ body {
 textarea {
   resize: none; }
 
-
+input, textarea,  select,{
+  font-family: "Poppins-Regular";
+  font-size: 13px;
+  color: #333; }
 
 p, h1, h2, h3, h4, h5, h6, ul {
   margin: 0; }
@@ -56,9 +59,7 @@ img {
   max-width: 100%;
   vertical-align: middle; }
 
-body {
 
-  background-size: cover; }
 
 .wrapper {
   max-width: 1400px;
@@ -159,7 +160,29 @@ body {
     box-sizing: border-box; }
   .form-holder.active:before {
     background: #f6c2ec; }
-
+#search{
+  height: 34px;
+}
+.form-control {
+  height: 46px;
+  border: none;
+  background: #f7f7f7;
+  width: 100%;
+  padding: 0 25px;
+  border-radius: 23px;
+  color: #333; }
+  .form-control::-webkit-input-placeholder {
+    color: #808080;
+    text-transform: uppercase; }
+  .form-control::-moz-placeholder {
+    color: #808080;
+    text-transform: uppercase; }
+  .form-control::-ms-input-placeholder {
+    color: #808080;
+    text-transform: uppercase; }
+  .form-control::-moz-placeholder {
+    color: #808080;
+    text-transform: uppercase; }
 
 .grid {
   margin-top: 15px; }

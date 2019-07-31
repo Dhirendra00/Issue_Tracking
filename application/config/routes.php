@@ -1,6 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
-$route['add_user']='pages/add_user';
+// $route['add_user']='pages/add_user';
+$route['user_register']='pages/addUser';
 $route['add_category']='pages/add_category';
 $route['add_issue']='pages/add_issue';
 $route['admin_dashboard'] = 'admin_pages/dashboard';
