@@ -189,7 +189,7 @@ html.fullscreen-bg #wrapper {
 .navbar-btn {
   float: left;
   padding: 16px 0; }
-  .navbar-btn #button {
+  .navbar-btn button {
     font-size: 24px;
     padding: 4px 8px;
     line-height: .7;
@@ -473,7 +473,7 @@ ul.list-justify > li {
 .input-group-addon {
   border: 1px solid #eaeaea; }
 
-/* fancy checkbox and radio #button */
+/* fancy checkbox and radio button */
 .fancy-checkbox {
   display: block;
   font-weight: normal; }
@@ -564,7 +564,7 @@ ul.list-justify > li {
       background-color: #fff; }
 
 /********************
- * #buttonS
+ * BUTTONS
  ********************/
 .btn {
   -webkit-border-radius: 2px;
@@ -629,7 +629,10 @@ fieldset[disabled] .btn {
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
   background-color: #fff;
   margin-bottom: 30px; 
-width: 1000px;}
+    }
+   /* .panel-body .no-padding{
+      width: 1000px;
+    }*/
   .panel .panel-heading,
   .panel .panel-body,
   .panel .panel-footer {
@@ -643,13 +646,13 @@ width: 1000px;}
       margin: 0;
       font-size: 18px;
       font-weight: 300; }
-    .panel .panel-heading #button {
+    .panel .panel-heading button {
       padding: 0;
       margin-left: 5px;
       background-color: transparent;
       border: none;
       outline: none; }
-      .panel .panel-heading #button i {
+      .panel .panel-heading button i {
         font-size: 14px; }
   .panel .panel-body {
     padding-top: 10px;
@@ -870,7 +873,7 @@ ul.activity-list > li {
     -webkit-box-shadow: none;
     box-shadow: none; }
 
-#toast-container .toast-close-#button {
+#toast-container .toast-close-button {
   top: -0.9em; }
 
 .toast a {

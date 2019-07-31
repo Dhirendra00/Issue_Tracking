@@ -90,7 +90,7 @@
 		<div id="sidebar-nav" class="sidebar">
 			<div class="sidebar-scroll">
 				<nav>
-						<div class="sidenav">
+						<div class="sidenav1">
 			<button id="button" class="drop1"><i id="lnr" class="lnr lnr-home"></i>Dashboard
   
   </button>
@@ -124,7 +124,12 @@
  
 </div>
 </nav>
-
+<script src="assets/vendor/jquery/jquery.min.js"></script>
+	<script src="assets/vendor/bootstrap/js/bootstrap.min.js"></script>
+	<script src="assets/vendor/jquery-slimscroll/jquery.slimscroll.min.js"></script>
+	<script src="assets/vendor/jquery.easy-pie-chart/jquery.easypiechart.min.js"></script>
+	<script src="assets/vendor/chartist/js/chartist.min.js"></script>
+	<script src="assets/scripts/klorofil-common.js"></script>
 <script>
 /* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
 var drop = document.getElementsByClassName("drop");

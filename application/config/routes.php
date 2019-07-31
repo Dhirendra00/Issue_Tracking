@@ -7,6 +7,7 @@ $route['add_issue']='pages/add_issue';
 $route['admin_dashboard'] = 'admin_pages/dashboard';
 $route['It_head_dashboard'] = 'It_head_pages/dashboard';
 $route['It_staff_dashboard'] = 'It_staff_pages/dashboard';
+$route['user_dashboard'] = 'user_pages/dashboard';
 // url//controller//function
 $route['(:any)'] = 'pages/view/$1';
 $route['default_controller'] = 'pages/view';
