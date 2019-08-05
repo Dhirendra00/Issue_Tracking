@@ -11,7 +11,7 @@ class model extends CI_Model{
 		$query = $this->db->get_where('issue',$id = array('id' => $id));
 		return $query->row_array();
 	}
-	public function add_issue($data){
+		public function add_issue($data){
 		return $this->db->insert('issue',$data);
 		
 	}
