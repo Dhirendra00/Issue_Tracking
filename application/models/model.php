@@ -49,5 +49,14 @@ class model extends CI_Model{
 	public function add_user($data){
 		return $this->db->insert('tbl_user',$data);
 	}
+
+	public function get_issuesTitle($id = false){
+		if ($id== FALSE) {
+			$query = $this->db->get('issue_title');
+			return $query->result_array();
+		}
+		$query = $this->db->get_where('issue_title',$id = array('id' => $id));
+		return $query->row_array();
+	}
 }
 ?>
