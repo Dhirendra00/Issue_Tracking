@@ -32,7 +32,7 @@ echo random_string('numeric',2,5);?></td>
 <td>Completed</td>
 <div class="assign">
 <!-- <td><span class="label label-success"><?php echo $post['status']?></span></td> -->
-<td id="demo"><button class="assign" type="button"  ><span class="lnr lnr-checkmark-circle" onclick="document.getElementById('demo').innerHTML = 'ram'"></span></button></td>
+<td id="demo<?php echo $post['id'];?>"><button class="assign" type="button"  ><span class="lnr lnr-checkmark-circle" onclick="acceptIssue(<?php echo $post['id'];?>)"></span></button></td>
 </div>
 </tr>
        <?php endforeach ;?>    
@@ -40,3 +40,9 @@ echo random_string('numeric',2,5);?></td>
         
     </table>
   
+  <script type="text/javascript">
+  	function acceptIssue(id){
+  		var td = document.getElementById('demo'+id);
+  		td.innerHTML=id;
+  	}
+  </script>

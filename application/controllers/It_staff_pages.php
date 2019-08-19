@@ -4,7 +4,7 @@
  */
 class It_staff_pages extends CI_Controller
 {
-	
+	$_SESSION['user']="Dhirendra";
 	public function dashboard()
 	{
 		if (!file_exists(APPPATH.'views/pages/It_staff_dashboard.php')) {
