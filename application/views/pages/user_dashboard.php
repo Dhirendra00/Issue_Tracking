@@ -1,35 +1,50 @@
-<head>
-	<script src="https://cdn.ckeditor.com/4.12.1/standard/ckeditor.js"></script>
-</head>
-<main>
-<div class="wrappar">
-<!-- <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-<link  href="summernote-bs4.css" rel="stylesheet">
-<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/dataTables.bootstrap4.min.css"> -->
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<div class="p-3 mb-2 bg-light text-dark">
-<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>	
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+             
 
-<div class="add_issues">
-<a class="btn btn-success update-pro" id="add_issue"><i class="lnr lnr-plus-circle"></i> <span>Add Issues!</span></a>
-</div>
+                <div class="container" id="container">
+            <div class="text-right text-success d-md-flex justify-content-md-end align-items-md-start"><button class="btn btn-primary border rounded" type="button" id="add_issue" href="google.com">+ Add Issues!</button></div>
+            <div class="row">
+               <!--  <div class="col-md-3">
+                    <div class="table-responsive">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>Column 1</th>
+                                    <th>Column 2</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Cell 1</td>
+                                    <td>Cell 2</td>
+                                </tr>
+                                <tr>
+                                    <td>Cell 3</td>
+                                    <td>Cell 4</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div> -->
+                <div class="col-md-9">
+                    <div class="table-responsive">
+           
+                    </div>
+                </div>
+            </div>
 
-<div class="main1" >
-<h3>My Issues:</h3>
-<table id="dataTables" class="table table-striped table-bordered" style="width:100%;">
-<thead>
-<tr>
-<th>Ticket No:</th>
-<th>Issue</th>
-<th>Date </th>
-<th>location</th>
-<!-- <th>Description </th> -->
-<th>Status</th>
-</tr>
-</thead>
-        <tbody>
+
+             <table id="example" class="table table-striped table-bordered" style="width:100%; font-size: 15px;">
+        <thead>
+            <tr>
+                <th>Ticket No.</th>
+                <th>Issue</th>
+                <th>Priority</th>
+                <th>Start date</th>
+                <th>status</th>
+               
+            </tr>
+        </thead>
+       <tbody>
 <?php foreach ($issue as $post) :
 $this->load->helper('string');
 $this->load->helper('date');?>
@@ -51,36 +66,38 @@ echo random_string('numeric',2,5);?></td>
         </tbody>
         
     </table>
-    </div>
+ 
+</div>
+</div>   
 
-<div class="main2">
-	<h3>Important updates!</h3>
-	<label><span>. Computer of room 104 is not working</span></label></br>
-	<label>.tomorrow system will be down due to maintance break from 1:00PM to 3:00PM</label>
-</div>	
 
-    <!-- adding issue form -->
+
+<!-- adding issue form -->
     <div class="add_issue1">
 
-       <div class="container"style="background: white; ">
+       <div class="container22">
 
-  	<div class="cl1" style=" color: green; font-family: bold;">
-  			<h3>ADD ISSUE</h3>
+    <div class="cl1" style=" color: green; font-family: bold;">
+            <h3>ADD ISSUE</h3>
   <label style="color: red;">x</label>
 </div>
   <form method="POST" action="add_issue">
    <div id="form" style="background: ivory; border-radius: 5px;"> 
     <label for="fname">Issue Title*</label>
-<select>
-	<option>select</option>
-	<option><?php foreach ($issue_title as $post) {
-		echo $post['issues_title'];
-	} ?></option>
+<select id="select" name="issue" onchange="return showTextArea();">
+    <option value="sele">select</option>
+<?php foreach ($issue_title as $post):?>
+    <option value=<?php echo $post['id']?>> <?php echo $post['issues_title'] ?></option>
+ <?php endforeach;?>
+
+ <option value="other">Other</option>
+
 </select>
- 
-    <label for="fname">Description*</label><br>
-    <textarea id="textarea" name="textarea"></textarea><br>
-    
+<div id="text" style="visibility: hidden;">
+  <!--   <label for="fname">Description*</label><br> -->
+    <textarea  name="textarea" ></textarea><br>
+</div>
+  
       <label for="fname">Date*</label>
       <br>
     <input type="date" value="<?php echo date('Y-m-d')?>" name="date" 
@@ -88,8 +105,8 @@ echo random_string('numeric',2,5);?></td>
 <br>
          <label for="fname">Priority*</label>
    <select><option>High</option>
-   	<option>Moderate</option>
-   	<option>Low</option></select>
+    <option>Moderate</option>
+    <option>Low</option></select>
 
  
 
@@ -98,21 +115,16 @@ echo random_string('numeric',2,5);?></td>
   </form>
 
 </div>
-						
-		</div>
+                        
+        </div>
 
 
 
 
-</div>
-</div>
-    <script type="text/javascript" src="https://code.jquery.com/jquery-5.3.1.min.js"></script>
-    <script type="text/javascript"></script>
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-  <script type="text/javascript" src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>  <script type="text/javascript" src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
-  <script type="text/javascript" src="https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap4.min.js"></script>
+
+
 <script>
-   CKEDITOR.replace( 'textarea' );
+ CKEDITOR.replace( 'textarea' );
              
 
 
@@ -125,52 +137,21 @@ $(document).ready(function() {
 
 
   document.getElementById('add_issue').addEventListener("click", function() {
-	document.querySelector('.add_issue1').style.display = "flex";
-	
-});
-	document.querySelector('.cl1').addEventListener("click", function() {
-	document.querySelector('.add_issue1').style.display = "none";
-});	
-</script>
-</main>	
-<style>
-	#dataTables{
- font-size: 12px;
-	}
-	.wrappar{
-		display: flex;
-		/*flex-direction: row;*/
-		
-	
-	}
-	.main1{
-		border: 2px solid white ;
-		border-radius: 5px; 
-		background: white;
-		 width: 100%;
-		 margin-left: 150%;
-		 margin-top: 5%;
-	
-	}
-		.main2{
-   border: 2px solid white ;
-   border-radius: 5px;
-    background: white;
-    width: 110%;
-    margin-left: 10%;
-   margin-top: -60%;
-   height: 115%;
-	}
+    document.querySelector('.add_issue1').style.display = "flex";
+    // document.querySelector("body").style.background = "rgba(0,0,0,0.7)";
 
-.add_issues{
-	display: flex;
-	justify-content: flex-end;
-	margin-left: 250%;
-	margin-top: 100px;
-	align-items: center;
-	color: white;
-}
-input[type=text], select, textarea,iframe {
+    
+});
+    document.querySelector('.cl1').addEventListener("click", function() {
+    document.querySelector('.add_issue1').style.display = "none";
+}); 
+
+
+
+</script>
+<style>
+
+input[type=text], select, iframe {
   width: 100%;
   padding: 5px;
   border: 1px solid #ccc;
@@ -215,30 +196,22 @@ input[type=submit]:hover {
   background-color: #45a049;
 }
 form{
-	border-radius: 15px solid;
+    border-radius: 15px solid;
 }
 .add_issue1{
-	width: 100%;
-	height: 100%;
-	background:rgba(0,0,0,0.7);
-	  position: absolute;
-	  top: 0;
-	  justify-content: center;
-	  align-items: top;
-	  display: none;
+  width: 100%;
+  height: 150%;
+    background:rgba(0,0,0,0.7);
+      position: absolute;
+      top: 0;
+      justify-content: center;
+      align-items: top;
+      display: none;
 }
-/*.add_category{
-	width: 100%;
-	height: 100%;
-	background:rgba(0,0,0,0.7);
-	  position: absolute;
-	  top: 0;
-	  justify-content: center;
-	  align-items: top;
-	  display: none;
-}*/
-.container {
+.container22 {
+  background: white;
 height: fit-content;
+width: 100%;
   border-radius: 5px;
   background-color: #f2f2f2;
 margin-top: 100px;
@@ -246,32 +219,32 @@ margin-top: 100px;
   width: 50%;
 }
 .cl {
-	display: flex;
-	justify-content: space-between;
-	/*position: absolute;*/
-	/*margin-top: -20px;*/
-	/*margin-left: 620px;*/
-	top: 2;
-	/*right: 10px;*/
-	font-size: 25px;
-	color: #333;
-	/*transform: rotate(45deg);*/
-	cursor: pointer;
-	&:hover {
-		color: #666;
-	}
+    display: flex;
+    justify-content: space-between;
+    /*position: absolute;*/
+    /*margin-top: -20px;*/
+    /*margin-left: 620px;*/
+    top: 2;
+    /*right: 10px;*/
+    font-size: 25px;
+    color: #333;
+    /*transform: rotate(45deg);*/
+    cursor: pointer;
+    &:hover {
+        color: #666;
+    }
 }
 .cl1 {
-	display: flex;
-	justify-content: space-between;
-		top: 2;
-	/*right: 10px;*/
-	font-size: 25px;
-	color: #333;
-	cursor: pointer;
-	&:hover {
-		color: #666;
-	}
+    display: flex;
+    justify-content: space-between;
+        top: 2;
+    /*right: 10px;*/
+    font-size: 25px;
+    color: #333;
+    cursor: pointer;
+    &:hover {
+        color: #666;
+    }
 }
 
 
@@ -282,4 +255,5 @@ margin-top: 100px;
 
   color: white;
 }
-</style>				
+
+</style>
