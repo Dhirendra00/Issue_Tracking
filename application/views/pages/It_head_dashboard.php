@@ -3,6 +3,7 @@
 
 
            <div class="container" id="container">
+           	 <div class="text-right text-success d-md-flex justify-content-md-end align-items-md-start"><button class="btn btn-primary border rounded" type="button" id="add_issue" href="google.com">My Issues</button></div>
         <table id="example" class="table table-striped table-bordered" style="width:100%; font-size: 15px;">
         <thead>
             <tr>
@@ -43,6 +44,6 @@ echo random_string('numeric',2,5);?></td>
   <script type="text/javascript">
   	function acceptIssue(id){
   		var td = document.getElementById('demo'+id);
-  		td.innerHTML=id;
+  		td.innerHTML='ram';
   	}
   </script>
